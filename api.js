@@ -4,10 +4,14 @@ const jwt = require("jsonwebtoken");
 const { exec } = require("child_process");
 const path = require("path");
 const fs = require("fs").promises;
+const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
 const PORT = 1234;
+
+// Enable CORS middleware
+app.use(cors());
 
 // Fungsi untuk membaca token langsung dari file
 async function readTokenFromFile() {
