@@ -2,7 +2,7 @@ const path = require('path')
 const os = require('os')
 const fse = require('fs-extra')
 
-const configFile = path.join(os.homedir(), '.moneylovercli')
+const configFile = path.join(__dirname, ".moneylovercli");
 let config
 
 async function ensureConfig () {
